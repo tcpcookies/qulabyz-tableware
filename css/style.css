@@ -40,6 +40,7 @@ body {
 }
 
 img { max-width: 100%; display: block; }
+picture { display: contents; }
 
 a { color: var(--terracotta); text-decoration: none; }
 a:hover { color: var(--orange-dark); }
@@ -211,6 +212,10 @@ li { margin-bottom: .4em; }
 .hero-bg {
   position: absolute; inset: 0;
   background-image: url("../images/bird-bloom-set.jpg");
+  background-image: image-set(
+    url("../images/bird-bloom-set.webp") type("image/webp"),
+    url("../images/bird-bloom-set.jpg") type("image/jpeg")
+  );
   background-size: cover;
   background-position: center 42%;
   opacity: .45;
